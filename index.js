@@ -105,7 +105,7 @@ const CONFIG = {
 };
 app.post('/addimagedata',upload.single("image"),async (req,res)=>{
     const client = new vision.ImageAnnotatorClient(CONFIG);
-    const fileName = `/THAI ID OCR APP/Backend/images/${req.savedStoryImage}`;
+    const fileName = `/Backend/images/${req.savedStoryImage}`;
     try{
         const [result] = await client.textDetection(fileName);
         const detections = await result.textAnnotations;
