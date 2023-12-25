@@ -105,7 +105,7 @@ const CONFIG = {
 };
 app.post('/addimagedata',upload.single("image"),async (req,res)=>{
     const client = new vision.ImageAnnotatorClient(CONFIG);
-    const fileName = `/images/${req.savedStoryImage}`;
+    const fileName = `images/${req.savedStoryImage}`;
     try{
         const [result] = await client.textDetection(fileName);
         const detections = await result.textAnnotations;
