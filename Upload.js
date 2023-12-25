@@ -22,6 +22,5 @@ const storage = multer.diskStorage({
 })
 
 const imageUpload = multer({storage})
-console.log("File Stored");
 
 module.exports = imageUpload ; 
