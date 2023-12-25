@@ -90,11 +90,13 @@ app.post('/getdata',async(req,res)=>{
             message:"Data Not Found"
         })
     }
-    res.status(200).json({
-        success:true,
-        message:"Data Found",
-        data:data
-    })
+    else{
+        res.status(200).json({
+            success:true,
+            message:"Data Found",
+            data:data
+        })
+    }
 })
 
 const CONFIG = {
